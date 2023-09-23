@@ -1,4 +1,7 @@
-export const add = (a, b, isLowerThanFive) => {
+import { isLowerThanFive } from './business';
+
+
+export const add = (a, b) => {
   const result = a + b;
 
   if (result < 5) {
