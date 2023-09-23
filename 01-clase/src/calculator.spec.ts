@@ -1,4 +1,5 @@
 import * as calculator from './calculator';
+import * as business from './business/calculator.business';
 
 describe('Calculator specs', () => {
   describe('add', () => {
@@ -6,9 +7,9 @@ describe('Calculator specs', () => {
       // Arrange - Definimos los parámetros de entrada que necesitamos antes de ejecutar el test o los mock que necesitamos hacer antes de nada
       const a = 2;
       const b = 2;
-      const isLowerThanFive = () => {}
+
       // Act - Ejecutar la funcionalidad que queremos probar
-      const result = calculator.add(a, b, isLowerThanFive);
+      const result = calculator.add(a, b);
 
       // Assert - Verificación
       expect(result).toBe(4);
@@ -17,10 +18,11 @@ describe('Calculator specs', () => {
       // Arrange
       const a = 2;
       const b = 2;
-      // spy (pertenece al tema de Mockear). El spy se utiliza siempre que la función que queramos probar, se haya pasado como parámetro de ese método
-      const isLowerThanFive = jest.fn();
+
+      // stub
+      const isLowerThanFive = jest.spyOn(business, 'isLowerThanFive');
       // Act
-      const result = calculator.add(a, b, isLowerThanFive);
+      const result = calculator.add(a, b);
 
       // Assert
       expect(isLowerThanFive).toHaveBeenCalled();
