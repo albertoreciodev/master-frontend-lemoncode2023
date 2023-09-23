@@ -18,8 +18,7 @@ describe('Calculator specs', () => {
       // Arrange
       const a = 2;
       const b = 2;
-      // spy
-      // const isLowerThanFive = jest.fn();
+
       // stub
       const isLowerThanFive = jest.spyOn(business, 'isLowerThanFive');
       // Act
