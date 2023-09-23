@@ -20,7 +20,10 @@ describe('Calculator specs', () => {
       const b = 2;
 
       // stub
-      const isLowerThanFive = jest.spyOn(business, 'isLowerThanFive');
+      const isLowerThanFive = jest.spyOn(business, 'isLowerThanFive')
+      .mockImplementation((result) => {
+        console.log(`This is the result ${result}`)
+      });
       // Act
       const result = calculator.add(a, b);
 
