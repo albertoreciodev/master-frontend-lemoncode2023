@@ -17,7 +17,7 @@ describe('Calculator specs', () => {
       // Arrange
       const a = 2;
       const b = 2;
-      // spy (pertenece al tema de Mockear). El spy se utiliza siempre que la función que queramos probar, se haya pasado como parámetro de ese método
+      // spy
       const isLowerThanFive = jest.fn();
       // Act
       const result = calculator.add(a, b, isLowerThanFive);
