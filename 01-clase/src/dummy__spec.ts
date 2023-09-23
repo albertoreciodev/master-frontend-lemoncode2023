@@ -8,6 +8,15 @@ describe('dummy specs', () => {
     // Act - Ejecutar la funcionalidad que queremos probar
 
     // Assert - Verificación
-    expect(true)
+    expect(true).toBeTruthy();
+  });
+
+  it('should fail spec', () => {
+    // Arrange - Definimos los parámetros de entrada que necesitamos antes de ejecutar el test o los mock que necesitamos hacer antes de nada
+
+    // Act - Ejecutar la funcionalidad que queremos probar
+
+    // Assert - Verificación
+    expect(true).toBeFalsy();
   });
 });
